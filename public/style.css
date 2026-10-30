@@ -1,0 +1,36 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.card {
+  background: #1e293b;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  max-width: 500px;
+  text-align: center;
+  border: 1px solid #334155;
+}
+.badge {
+  background: #10b981;
+  color: #022c22;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.status-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #0f172a;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}

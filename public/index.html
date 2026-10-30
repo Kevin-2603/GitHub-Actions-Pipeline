@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CI/CD Automated Deployment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="badge">CI/CD Pipeline Active</div>
+    <h1>🚀 Automated Cloud Deployment</h1>
+    <p>Aplikasi ini di-deploy secara otomatis ke <strong>Render.com</strong> menggunakan <strong>GitHub Actions</strong> setiap kali ada perubahan kode di branch <code>main</code>.</p>
+
+    <div class="status-box">
+      <h3>System Status</h3>
+      <p id="health-status">Checking API...</p>
+    </div>
+  </div>
+
+  <script>
+    fetch('/api/health')
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('health-status').innerText = `Status: ${data.status} - ${data.message}`;
+      })
+      .catch(() => {
+        document.getElementById('health-status').innerText = 'Status: Disconnected';
+      });
+  </script>
+</body>
+</html>
