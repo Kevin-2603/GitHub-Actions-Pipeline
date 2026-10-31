@@ -29,7 +29,7 @@ Proyek ini mendemonstrasikan implementasi **Continuous Integration & Continuous 
 [ Self-Hosted Runner (WSL2 On-Premise) ]
    ├── 1. Receive Deployment Job
    ├── 2. Pull Latest Code Changes
-   └── 3. Restart Application Service (`npm start`)
+   └── 3. Restart Application Service via pm2 (`pm2 reload`)
             │
             ▼
 [ Live Web Application ] ──> http://localhost:3000
@@ -72,6 +72,12 @@ npm install
 npm test
 ```
 4. Menjalankan Server Aplikasi
+* Opsi 1: Menjalankan di latar belakang dengan PM2
+```bash
+npm install -g pm2
+pm2 start src/server.js --name "express-app"
+```
+* Opsi 2: Menjalankan secara reguler
 ```bash
 npm start
 ```
@@ -82,6 +88,8 @@ npm start
    * Berjalan di lingkungan ubuntu-latest bawaan GitHub.
    * Mengisolasi dependensi dengan npm ci.
    * Menjalankan unit test dengan Jest. Jika ada test yang gagal (fail), proses deployment akan dibatalkan secara otomatis.
-2. **Self-Hosted Deployment (CD Job):**
-   * Mengeksekusi instruksi langsung di server lokal WSL2 menggunakan label runs-on: self-hosted.
-   * Menjamin transparansi deployment tanpa tergantung pada verifikasi kartu kredit atau batasan kuota platform cloud eksternal.
+2. Self-Hosted Deployment (CD Job):
+   * Mengeksekusi instruksi langsung di server lokal menggunakan label `runs-on: self-hosted`.
+   * **Zero-Downtime Deployment via PM2:** Menggunakan PM2 Process Manager untuk melakukan otomatisasi update kode tanpa menghentikan aplikasi secara total.
+   * **Persistence & Auto-Recovery:** Menjamin aplikasi Node.js tetap menyala di latar belakang dan otomatis aktif kembali jika server mengalami crash atau *restart*.
+
