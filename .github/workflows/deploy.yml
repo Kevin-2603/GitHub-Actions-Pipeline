@@ -40,6 +40,8 @@ jobs:
       - name: Install Node.js Dependencies
         run: npm ci --omit=dev
 
-      - name: Restart Application
+      - name: Restart Application via PM2
         run: |
-          npm start &
+          pm2 reload express-app --update-env || pm2 start src/server.js --name "express-app"
+          pm2 save
+
