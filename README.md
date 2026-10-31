@@ -60,8 +60,8 @@ GitHub-Actions-Render-Pipeline/
 ## 🚀 Cara Menjalankan Secara Lokal
 1. Clone Repository
 ```bash
-git clone [https://github.com/Kevin-2603/GitHub-Actions-Render-Pipeline.git](https://github.com/Kevin-2603/GitHub-Actions-Render-Pipeline.git)
-cd GitHub-Actions-Render-Pipeline
+git clone https://github.com/Kevin-2603/GitHub-Actions-Pipeline.git
+cd GitHub-Actions-Pipeline
 ```
 2. Install Dependensi
 ```bash
