@@ -1,4 +1,4 @@
-# 🚀 Express.js Automated CI/CD Pipeline
+# Express.js Automated CI/CD Pipeline
 
 ![GitHub Actions Status](https://img.shields.io/github/actions/workflow/status/Kevin-2603/GitHub-Actions-Render-Pipeline/deploy.yml?branch=main&label=CI%2FCD%20Build)
 ![Node.js Version](https://img.shields.io/badge/Node.js-v20-brightgreen)
@@ -9,7 +9,7 @@ Proyek ini mendemonstrasikan implementasi **Continuous Integration & Continuous 
 
 ---
 
-## 📌 Arsitektur Pipeline
+## Arsitektur Pipeline
 
 ```text
 [ Developer Workspace ]
@@ -34,14 +34,14 @@ Proyek ini mendemonstrasikan implementasi **Continuous Integration & Continuous 
             ▼
 [ Live Web Application ] ──> http://localhost:3000
 ```
-## 🛠️ Tech Stack & Tools
+## ech Stack & Tools
 * **Backend Framework:** Node.js & Express.js
 * **Testing Framework:** Jest & Supertest
 * **CI/CD Orchestration:** GitHub Actions
 * **Target Deployment:** Self-Hosted Runner (Ubuntu via WSL2)
 * **Local OS Environment:** Windows 11 / WSL2
 
-## 📂 Struktur Proyek
+## Struktur Proyek
 ```text
 GitHub-Actions-Render-Pipeline/
 ├── .github/
@@ -57,7 +57,7 @@ GitHub-Actions-Render-Pipeline/
 ├── package.json
 └── README.md
 ```
-## 🚀 Cara Menjalankan Secara Lokal
+## Cara Menjalankan Secara Lokal
 1. Clone Repository
 ```bash
 git clone https://github.com/Kevin-2603/GitHub-Actions-Pipeline.git
@@ -83,7 +83,7 @@ npm start
 ```
 **Buka browser di http://localhost:3000 untuk melihat aplikasi web yang berjalan.**
 
-## ⚙️ Detail Konfigurasi CI/CD Pipeline
+## Detail Konfigurasi CI/CD Pipeline
 1. **Automated Testing (CI Job):**
    * Berjalan di lingkungan ubuntu-latest bawaan GitHub.
    * Mengisolasi dependensi dengan npm ci.
